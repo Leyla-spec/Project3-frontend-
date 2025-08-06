@@ -1,0 +1,72 @@
+.logo-link {
+    background-image: url('../css/assets/images/logo-header1.svg');
+}
+
+header {
+    background-color: rgb(80, 79, 79, 0.5);
+    height: 200px;
+    position: relative;
+}
+
+.location {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.location i {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.number-link {
+    text-decoration: none;
+    color: white;
+}
+
+.callus {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.callus i {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.firstcontact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    align-items: center;
+}
+
+.navbar{
+    position: absolute;
+    bottom: 10px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li i {
+    color: grey;
+}

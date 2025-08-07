@@ -1,0 +1,125 @@
+
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(80, 79, 79, 0.5);
+}
+
+header {
+    width: 1200px;
+    height: 100px;
+    position: relative;
+    background-color: rgb(80, 79, 79, 0.5);
+    display: flex;
+}
+
+.logo-link {
+    background-image: url('../images/logo-header1.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 200px;
+    height: 100px;
+}
+.xett {
+    width: 1000px;
+    height: 1px;
+    background-color: rgb(234, 221, 221);
+    position: absolute;
+    top: 40px;
+    left: 200px;
+}
+
+.location {
+    color: white;
+    position: absolute;
+    left: 220px;
+    top: 0px;
+    padding: 20px;
+    font-size: 10px;
+}
+
+.location i {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.number-link{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.callus {
+    position: absolute;
+    right: 170px;
+    top: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+
+.email {
+    position: absolute;
+    left: 420px;
+    top: 15px;
+    color: white;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.email i {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.email-link {
+    color: white;
+    text-decoration: none;
+}
+
+.firstcontact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.navbar {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+    font-size: 15px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li i {
+    color: grey;
+}

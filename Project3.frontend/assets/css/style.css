@@ -1,3 +1,4 @@
+/* header end */
 
 .container {
     position: absolute;
@@ -14,7 +15,6 @@ header {
     width: 1200px;
     height: 100px;
     position: relative;
-    background-color: rgb(80, 79, 79, 0.5);
     display: flex;
 }
 
@@ -29,6 +29,7 @@ header {
     width: 200px;
     height: 100px;
 }
+
 .xett {
     width: 1000px;
     height: 1px;
@@ -43,16 +44,16 @@ header {
     position: absolute;
     left: 220px;
     top: 0px;
-    padding: 20px;
-    font-size: 10px;
+    padding: 10px;
+    font-size: 14px;
 }
 
 .location i {
-    font-size: 10px;
+    font-size: 15px;
     margin-right: 5px;
 }
 
-.number-link{
+.number-link {
     position: absolute;
     right: 20px;
     top: 10px;
@@ -60,10 +61,11 @@ header {
     color: white;
     font-size: 20px;
 }
+
 .callus {
     position: absolute;
     right: 170px;
-    top: 10px;
+    top: 7px;
     color: white;
     font-size: 20px;
 }
@@ -71,17 +73,19 @@ header {
 
 .email {
     position: absolute;
-    left: 420px;
-    top: 15px;
+    left: 480px;
+    top: 8px;
     color: white;
-    font-size: 13px;
+    font-size: 15px;
     display: flex;
     justify-content: space-between;
 }
 
 .email i {
-    font-size: 15px;
-    margin-right: 10px;
+    position: absolute;
+    top: 2px;
+    right: 160px;
+    font-size: 17px;
 }
 
 .email-link {
@@ -96,8 +100,9 @@ header {
     padding: 20px;
 }
 
-
 .navbar {
+    height: 30px;
+    width: 700px;
     position: absolute;
     top: 70px;
     left: 500px;
@@ -121,5 +126,102 @@ nav ul li a {
 }
 
 nav ul li i {
-    color: grey;
+    color: rgb(121, 121, 122);
 }
+
+/* header end */
+
+/* ----------------------------------------------------------------------------- */
+
+/* main start */
+/* section images start */
+
+.section-images{
+    background-color: #f1f1f1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Hide the images by default */
+.mySlides1 {
+  background-image: url('./assets/images/slider1h1.jpg');
+  background-size: cover;
+  display: none;
+}
+
+.mySlides2 {
+    background-image: url('./assets/images/slider1h2.jpg');
+    display: none;
+  }
+
+.mySlides3 {
+    background-image: url('./assets/images/slider1h3.jpg');
+    display: none;
+  }
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  display: flex;
+    align-items: center;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev, .next {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* section images end */

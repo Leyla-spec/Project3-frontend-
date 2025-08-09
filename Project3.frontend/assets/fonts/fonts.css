@@ -68,3 +68,18 @@
   font-style: normal;
   text-shadow: 1px 1px 1px #000000;
 }
+
+.option-text {
+  padding-left: 20px;
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.search-button {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}

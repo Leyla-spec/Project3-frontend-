@@ -72,3 +72,4 @@ dots.forEach((dot, index) => {
         currentSlide(index + 1);
     });
 });
+

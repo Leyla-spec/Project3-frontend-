@@ -2,15 +2,19 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="shortcut icon" href="/assets/images/logo-header2 -.jpg" type="image/x-icon">
+
+    <link rel="shortcut icon" href="./assets/images/logo-header2 -.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 
 <body>
@@ -47,7 +51,7 @@
             <div class="navbar">
                 <nav>
                     <ul>
-                        <li onmouseenter="linkshow(this)" onmouseleave="linkhide(this)"><a href="">HOME</a>
+                        <li><a href="">HOME</a>
                             <i class="fa-solid fa-chevron-down"></i>
                             <ul>
                                 <li><a href=""></a></li>
@@ -106,32 +110,128 @@
                     </ul>
                 </nav>
             </div>
-            <div class="slideshow-container">
 
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade" data-swiper-autoplay="500">
-                    <!-- <img src="./assets/images/slider1h1.jpg" style="width:100%"> -->
+        </header>
+        <!-- header end -->
+    </div>
+    <main>
+        <!-- slideshow container start -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./assets/images/slider1h1.jpg" style="width:100%">
+                <div class="card-container ">
+                    <div class="first-text">
+                        87 Mishaum Point Rd
+                    </div>
+                    <div class="second-text">
+                        Dartmouth, MA 02748
+                    </div>
+                    <div class="card-start">
+                        <div class="card-start-text">
+                            HOUSE FOR SALE
+                        </div>
+                    </div>
+                    <div class="card-end"></div>
+                    <div class="card-price">
+                        <div class="card-price-text">
+                            <sup>$</sup>1,249,000
+                        </div>
+                    </div>
                 </div>
-
-                <div class="mySlides fade" data-swiper-autoplay="500">
-                    <img src="./assets/images/slider1h2.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides fade" data-swiper-autoplay="500">
-                    <img src="./assets/images/slider1h3.jpg" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-    </header>
+
+            <div class="mySlides fade">
+                <img src="./assets/images/slider1h2.jpg" style="width:100%">
+                <div class="card-container ">
+                    <div class="first-text">
+                        87 Mishaum Point Rd
+                    </div>
+                    <div class="second-text">
+                        Dartmouth, MA 02748
+                    </div>
+                    <div class="card-start">
+                        <div class="card-start-text">
+                            HOUSE FOR SALE
+                        </div>
+                    </div>
+                    <div class="card-end"></div>
+                    <div class="card-price">
+                        <div class="card-price-text">
+                            <sup>$</sup>1,249,000
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./assets/images/slider1h3.jpg" style="width:100%">
+                <div class="card-container ">
+                    <div class="first-text">
+                        87 Mishaum Point Rd
+                    </div>
+                    <div class="second-text">
+                        Dartmouth, MA 02748
+                    </div>
+                    <div class="card-start">
+                        <div class="card-start-text">
+                            HOUSE FOR SALE
+                        </div>
+                    </div>
+                    <div class="card-end"></div>
+                    <div class="card-price">
+                        <div class="card-price-text">
+                            <sup>$</sup>1,249,000
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <!-- slideshow container end -->
+        <div class="option-container">
+            <div class="option">
+                <div class="option-text">
+                    <span>Buy</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+            </div>
+            <div class="option">
+                <div class="option-text">
+                    <span>Rent</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="option">
+                <div class="option-text">
+                    <span>Commercial</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+            </div>
+            <div class="option">
+                <div class="option-text">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Favorites</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
     <footer>
 
     </footer>
-    
-</div>
+
+
 </body>
 
 </html>
-<script src="./assets/js/script.js"></script>
+<script src="./assets/js/script.js" defer></script>

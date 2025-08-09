@@ -1,68 +1,74 @@
-function linkshow(x){
-    if (x.style.display === "none") {
-        x.style.display = "table-column-group";
-    } else {
-        x.style.display = "none";
-    }
+let slideIndex = 0;
+const slides = document.querySelectorAll('.mySlides');
+const dots = document.querySelectorAll('.dot');
+const slideshowContainer = document.querySelector('.slideshow-container');
+let slideInterval;
+
+function hideSlideContent() {
+    slides.forEach(slide => {
+        const content = slide.querySelector('.card-container');
+        if (content) content.style.opacity = '0';
+        const texts = slide.querySelectorAll('.first-text, .second-text');
+        texts.forEach(text => text.style.opacity = '0');
+    });
 }
 
-function linkhide(x){
-    if (x.style.display === "table-column-group") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-$(document).ready(function() {
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active-dot'));
 
-let slideIndex = 1;
-showSlides(slideIndex);
+    slides[index].classList.add('active');
+    dots[index].classList.add('active-dot');
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    slideIndex = index;
+    
+    hideSlideContent();
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-let swiperCMSglobalSetting = {
-    speed: 400,
-    spaceBetween: 100,
-    autoplay: false,
-    disableOnInteraction: false,
-    effect: "fade",
-    pagination: false,
-    navigation: false,
-    loop: true,
-  };
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-//   var swiper = new Swiper(this, swiperCMSglobalSetting);
-
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
- slides[i].style.display = "none";
-//     slides[i].mouseenter = function() { swiper.autoplay.stop(); };
-//     slides[i].mouseleave = function() { swiper.autoplay.start();
-//   }
-}
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-    $(`.mySlides`).mouseenter(function() {
-        while (slideIndex > 1) {
-            showSlides(slideIndex);
+    setTimeout(() => {
+        const activeSlide = slides[index];
+        const card = activeSlide.querySelector('.card-container');
+        const texts = activeSlide.querySelectorAll('.first-text, .second-text');
+        
+        if (card) {
+            card.style.opacity = '1';
         }
+        if (texts) {
+            texts.forEach(text => text.style.opacity = '1');
+        }
+    }, 1500);
+}
+
+function plusSlides(n) {
+    let newIndex = slideIndex + n;
+    if (newIndex >= slides.length) newIndex = 0;
+    if (newIndex < 0) newIndex = slides.length - 1;
+    showSlide(newIndex);
+}
+
+function currentSlide(n) {
+    showSlide(n - 1);
+}
+
+function startSlideShow() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(() => {
+        plusSlides(1);
+    }, 6000);
+}
+
+function stopSlideShow() {
+    clearInterval(slideInterval);
+}
+
+window.addEventListener('load', () => {
+    showSlide(0);
+});
+
+slideshowContainer.addEventListener('mouseenter', startSlideShow);
+slideshowContainer.addEventListener('mouseleave', stopSlideShow);
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide(index + 1);
     });
 });

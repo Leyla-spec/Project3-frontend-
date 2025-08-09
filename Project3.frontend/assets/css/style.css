@@ -1,5 +1,11 @@
 /* header end */
 
+html body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
 .container {
     position: absolute;
     display: flex;
@@ -9,6 +15,8 @@
     width: 100%;
     height: 100px;
     background-color: rgb(80, 79, 79, 0.5);
+
+    z-index: 1000;
 }
 
 header {
@@ -116,8 +124,20 @@ nav ul {
     justify-content: space-between;
 }
 
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 252, 252, 0.5);
+}
+
 nav ul li {
     list-style: none;
+}
+
+nav ul li:hover>ul {
+    display: block;
+    position: absolute;
+    background-color: rgb(80, 79, 79, 0.5);
 }
 
 nav ul li a {
@@ -136,92 +156,220 @@ nav ul li i {
 /* main start */
 /* section images start */
 
-.section-images{
-    background-color: #f1f1f1;
+* {
+    box-sizing: border-box
+}
+
+.slideshow-container {
+    background-color: black;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    margin: auto;
+    overflow: hidden;
+    height: 800px;
+}
+
+.mySlides {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0;
-    padding: 0;
-}
-/* Slideshow container */
-.slideshow-container {
-    position: relative;
-    width: 100%;
-}
-
-/* Hide the images by default */
-.mySlides1 {
-  background-image: url('./assets/images/slider1h1.jpg');
-  background-size: cover;
-  display: none;
+    height: 100%;
+    opacity: 0;
+    filter: blur(2px);
+    transition: opacity 1s ease, filter 1s ease;
+    display: block;
+    object-fit: cover;
 }
 
-.mySlides2 {
-    background-image: url('./assets/images/slider1h2.jpg');
-    display: none;
-  }
-
-.mySlides3 {
-    background-image: url('./assets/images/slider1h3.jpg');
-    display: none;
-  }
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  display: flex;
-    align-items: center;
+.mySlides.active {
+    opacity: 1;
+    filter: blur(0);
+    z-index: 10;
 }
 
-/* Position the "next button" to the right */
+.prev,
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(255, 255, 255, 0.8);
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 3px;
+    user-select: none;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev, .next {
-  background-color: rgba(0, 0, 0, 0.3);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* The dots/bullets/indicators */
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.dots {
+    display: flex;
+    text-align: center;
+    position: absolute;
+    bottom: 100px;
+    left: 46%;
+    width: 100%;
+    height: 20px;
+    z-index: 9999;
+}
+
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 3px;
+    width: 40px;
+    margin: 0 4px;
+    background-color: #bbb;
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+    z-index: 2000;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.active-dot,
+.dot1:hover {
+    background-color: #ffffff;
+    pointer-events: none;
 }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.slideshow-container:hover .prev,
+.slideshow-container:hover .next {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.card-container {
+    position: absolute;
+    top: 30%;
+    left: 41%;
+    height: 50%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    z-index: 2000;
+}
+
+.card-start {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    border: 10px solid rgba(255, 255, 255);
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.card-end {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    border: 10px solid rgba(255, 255, 255);
+    border-top: none;
+}
+
+.card-price {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(55, 53, 61);
+    font-size: 25px;
+}
+
+.first-text {
+    position: absolute;
+    left: -140px;
+    top: 100px;
+    color: white;
+    font-size: 60px;
+    width: 800px;
 }
 
 
-/* section images end */
+.second-text {
+    position: absolute;
+    left: -7px;
+    top: 200px;
+    color: white;
+    font-size: 30px;
+    width: 800px;
+}
+
+/* Card elementlərinin ilkin, gizli vəziyyəti */
+.card-container,
+.first-text,
+.second-text {
+    opacity: 0;
+    transform: translateX(-50px); /* Elementləri soldan gizlədir */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Slayd aktiv olduqda elementlərin görünməsi və hərəkət etməsi */
+.mySlides.active .card-container,
+.mySlides.active .first-text,
+.mySlides.active .second-text {
+    opacity: 1;
+    transform: translateX(0); /* Normal vəziyyətə qayıdır */
+}
+
+/* Fərqli gecikmələr */
+/* `axiomthemes.com` saytında olduğu kimi mətnlərin və kartın fərqli vaxtlarda görünməsi üçün */
+.mySlides.active .first-text {
+    transition-delay: 0.5s;
+}
+
+.mySlides.active .second-text {
+    transition-delay: 0.7s;
+}
+
+.mySlides.active .card-container {
+    transition-delay: 0.9s;
+}
+
+/* Hərəkətli oxlar üçün */
+.slideshow-container:hover .prev,
+.slideshow-container:hover .next {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1); /* Hover zamanı böyüdür */
+    transition: all 0.3s ease-in-out;
+}
+
+.option-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+}

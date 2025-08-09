@@ -1,4 +1,4 @@
-/* header end */
+/* header start */
 
 html body {
     margin: 0;
@@ -325,25 +325,21 @@ nav ul li i {
     width: 800px;
 }
 
-/* Card elementlərinin ilkin, gizli vəziyyəti */
 .card-container,
 .first-text,
 .second-text {
     opacity: 0;
-    transform: translateX(-50px); /* Elementləri soldan gizlədir */
+    transform: translateX(-50px); 
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Slayd aktiv olduqda elementlərin görünməsi və hərəkət etməsi */
 .mySlides.active .card-container,
 .mySlides.active .first-text,
 .mySlides.active .second-text {
     opacity: 1;
-    transform: translateX(0); /* Normal vəziyyətə qayıdır */
+    transform: translateX(0);
 }
 
-/* Fərqli gecikmələr */
-/* `axiomthemes.com` saytında olduğu kimi mətnlərin və kartın fərqli vaxtlarda görünməsi üçün */
 .mySlides.active .first-text {
     transition-delay: 0.5s;
 }
@@ -356,11 +352,10 @@ nav ul li i {
     transition-delay: 0.9s;
 }
 
-/* Hərəkətli oxlar üçün */
 .slideshow-container:hover .prev,
 .slideshow-container:hover .next {
     opacity: 1;
-    transform: translateY(-50%) scale(1.1); /* Hover zamanı böyüdür */
+    transform: translateY(-50%) scale(1.1);
     transition: all 0.3s ease-in-out;
 }
 
@@ -372,4 +367,5 @@ nav ul li i {
     height: 300px;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
+
 }

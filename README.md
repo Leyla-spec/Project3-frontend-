@@ -33,16 +33,16 @@ index.html
 assets/
 
   ├── css/
-  
   │     └── style.css
   │          — Səhifənin dizaynı və stillərindən məsul olan CSS faylı
-  ├── js/
   
+  ├── js/
   │     └── script.js
   │          — Slayd şouları, sürüşdürmə funksionallığı və digər interaktiv elementlər üçün JavaScript kodu
-  ├── images/
   
+  ├── images/
   │     — Layihədə istifadə olunan şəkillər
+  
   └── icons/
         — Layihədə istifadə olunan ikonlar
 

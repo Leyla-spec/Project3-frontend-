@@ -28,9 +28,9 @@ Sonra `index.html` faylını sevimli veb brauzerinizdə açın.
 ## Fayl Strukturu
 
 index.html              — Veb-saytın əsas strukturunu təyin edən HTML faylı
+
 assets/
-  ├── css/
-  
+  ├── css/ 
   │     └── style.css   — Səhifənin dizaynı və stillərindən məsul olan CSS faylı
   
   ├── js/

@@ -32,10 +32,12 @@ index.html              — Veb-saytın əsas strukturunu təyin edən HTML fayl
 assets/
 
   ├── css/ 
-  │     └── style.css   — Səhifənin dizaynı və stillərindən məsul olan CSS faylı
+  │     
+  └── style.css   — Səhifənin dizaynı və stillərindən məsul olan CSS faylı
   
   ├── js/
-  │     └── script.js   — Slayd şouları, sürüşdürmə funksionallığı və digər interaktiv elementlər üçün JavaScript kodu
+  │     
+  └── script.js   — Slayd şouları, sürüşdürmə funksionallığı və digər interaktiv elementlər üçün JavaScript kodu
   
   ├── images/           — Layihədə istifadə olunan şəkillər
   

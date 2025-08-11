@@ -64,7 +64,7 @@ assets/
 
 ## Müəllif
 
-Leyla Eliyeva – [GitHub profil linki](https://github.com/Leyla-spec)
+Leyla Əliyeva – [GitHub profil linki](https://github.com/Leyla-spec)
 
 
 ---

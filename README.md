@@ -30,7 +30,9 @@ Sonra `index.html` faylını sevimli veb brauzerinizdə açın.
 index.html
   — Veb-saytın əsas strukturunu təyin edən HTML faylı
 
+
 assets/
+  
   ├── css/
   
   │     └── style.css

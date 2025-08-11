@@ -32,12 +32,12 @@ index.html
 
 assets/
 
-  ├── css/
-  │     └── style.css
+  ├── css/ │     
+           └── style.css
   │          — Səhifənin dizaynı və stillərindən məsul olan CSS faylı
   
-  ├── js/
-  │     └── script.js
+  ├── js/  │     
+           └── script.js
   │          — Slayd şouları, sürüşdürmə funksionallığı və digər interaktiv elementlər üçün JavaScript kodu
   
   ├── images/

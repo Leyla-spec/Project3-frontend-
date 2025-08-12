@@ -64,56 +64,71 @@
                     <ul>
                         <li><a href="">HOME</a>
                             <i class="fa-solid fa-sort-down"></i>
-                            <ul>
-                                <li><a href="">dcdc</a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
+                            <ul class="dropdown">
+                                <li><a href="">HOME 1</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">HOME 2</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">HOME 3</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">RTL VERSION</a></li>
                             </ul>
                         </li>
                         <li><a href="">FEATURES</a>
                             <i class="fa-solid fa-sort-down"></i>
-                            <ul>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
+                            <ul class="dropdown">
+                                <li><a href="">ELEMENTS</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">BOOKING</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">SERVICE PLUS</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">PRIVACY POLICY</a></li>
                             </ul>
                         </li>
                         <li><a href="">ABOUT US</a>
                             <i class="fa-solid fa-sort-down"></i>
-                            <ul>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
+                            <ul class="dropdown">
+                                <li><a href="">ABOUT</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">TEAM</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">SERVICES</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">PRICING</a></li>
                             </ul>
                         </li>
                         <li><a href="">LISTING</a>
                             <i class="fa-solid fa-sort-down"></i>
-                            <ul>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
+                            <ul class="dropdown">
+                                <li><a href="">ALL PROPERTIES</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">SINGLE PROPERTY</a></li>
+
                             </ul>
                         </li>
                         <li><a href="">GALLERY</a>
                             <i class="fa-solid fa-sort-down"></i>
-                            <ul>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
+                            <ul class="dropdown">
+                                <li><a href="">GRID</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">MASONRY</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">COBBLES</a></li>
                             </ul>
                         </li>
                         <li><a href="">BLOG</a>
                             <i class="fa-solid fa-sort-down"></i>
-                            <ul>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
+                            <ul class="dropdown">
+                                <li><a href="">CLASSIC WITH SIDEBAR</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">CLASSIC WITHOUT SIDEBAR</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">MASONRY</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">PORTFOLIO</a></li>
+                                <div class="dropdown-line"></div>
+                                <li><a href="">POST FORMATS</a></li>
                             </ul>
                         </li>
                         <li><a href="">CONTACTS</a>
@@ -253,15 +268,37 @@
                 <div class="search">
                     <button class="search-button">SEARCH</button>
                 </div>
-                <div class="area-range">
-                    <input type="range" id="areaMin" min="0" max="10000" value="0">
-                    <input type="range" id="areaMax" min="0" max="10000" value="10000">
+                <div class="search-range">
+                    <div class="values">
+                        <span id="range1">
+                            0
+                        </span>
+                        <span> &dash; </span>
+                        <span id="range2">
+                            10000
+                        </span>
+                    </div>
+                    <div class="area-range">
+                        <input type="range" id="areaMin" min="0" max="10000" value="0" oninput="slideOne()">
+                        <input type="range" id="areaMax" min="0" max="10000" value="10000" oninput="slideOne()">
+                    </div>
+                </div>
+                <div class="search-range">
+                <div class="values">
+                    <span id="range1">
+                        0
+                    </span>
+                    <span> &dash; </span>
+                    <span id="range2">
+                        10000
+                    </span>
                 </div>
                 <div class="price-range">
                     <input type="range" id="priceMin" min="0" max="10000" value="0">
                     <input type="range" id="priceMax" min="0" max="10000" value="10000">
                 </div>
             </div>
+        </div>
         </div>
         <!-- search options end -->
 
@@ -702,16 +739,16 @@
         </div>
     </footer>
     <div class="right-buttons">
-    <div class="right-buttons-first">
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        <div class="right-buttons-first">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="right-buttons-second">
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="right-buttons-third">
+            <a href="#"><i class="fas fa-bars"></i></a>
+        </div>
     </div>
-    <div class="right-buttons-second">
-        <a href="#"><i class="fas fa-envelope"></i></a>
-    </div>
-    <div class="right-buttons-third">
-        <a href="#"><i class="fas fa-bars"></i></a>
-    </div>
-</div>
     <a href="#" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a>
 
 </body>

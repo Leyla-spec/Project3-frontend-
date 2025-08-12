@@ -160,7 +160,7 @@
 .properties-title {
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -217,5 +217,19 @@
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
+  font-style: normal;
+}
+
+.recent-properties .card .card-text .red-title {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.recent-properties .card .card-text .location-first-part a {
+   font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
   font-style: normal;
 }

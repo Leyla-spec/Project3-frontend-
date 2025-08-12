@@ -1,0 +1,197 @@
+
+.about {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #ffff;
+    width: 100%;
+    height: 710px;
+}
+
+.text-part {
+    color: black;
+}
+
+.text-board {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 1000;
+}
+
+.photo-board {
+    width: 50%;
+    float: right;
+}
+
+.photo-board img {
+    position: absolute;
+    top: 80px;
+    width: 650px;
+    right: 50px;
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+    border-image-repeat: no-repeat;
+
+}
+
+.text-location {
+    font-size: 45px;
+    position: relative;
+    top: 130px;
+    left: 40px;
+}
+
+.text-location-part {
+    position: relative;
+    top: 130px;
+    left: 110px;
+    font-size: 25px;
+}
+
+.text-explanation {
+    position: relative;
+    top: 150px;
+    left: 50px;
+    font-size: 20px;
+    width: 700px;
+    
+}
+
+.price-btn {
+    position: relative;
+    top: 30px;
+    left: 50px;
+    font-size: 20px;
+    width: 220px;
+    height: 70px;
+    font-size: 30px;
+    background-color: rgb(239, 89, 90);
+    border: none;
+    color: white;
+}
+
+.price-btn sup {
+    position: absolute;
+    top: 15px;
+    left: 34px;
+    font-size: 20px;
+}
+
+.text-short-explanation-border1 ul {
+    width: 300px;
+    list-style: square;
+    position: relative;
+    top: 140px;
+    left: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.text-short-explanation-border1 ul li {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.text-short-explanation-border2 ul {
+    width: 300px;
+    list-style: square;
+    margin-left: 350px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    bottom: 3px;
+    
+}
+
+.text-short-explanation-border2 ul li {
+    font-size: 20px;
+    margin-top: 30px;
+
+}
+
+ul li::marker {
+    color: rgb(239, 89, 90);
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.icons {
+    position: relative;
+    bottom: 25px;
+    left: 300px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.5;
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.area-icon {
+    display: flex;
+    align-items: center;
+}
+
+.area-icon span {
+    font-size: 17px;
+    width: 80px;
+}
+
+.bed-icon {
+    display: flex;
+    align-items: center;
+}
+
+.bed-icon span {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.bath-icon {
+    display: flex;
+    align-items: center;
+}
+
+.bath-icon span {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.bath-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.garage-icon {
+    display: flex;
+    align-items: center;
+}
+
+.garage-icon span {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.garage-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.back-text {
+    font-size: 240px;
+    position: absolute;
+    left: -80px;
+    z-index: 0;
+    opacity: 0.5;
+    top: -16px;
+}
